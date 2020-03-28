@@ -2,7 +2,7 @@
 <widget id="com.scuolainrete.narbone" version="3.8.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>IC Narbone</name>
     <description>IC Narbone official app</description>
-    <author email="support@edisonweb.com" href="http://edisonweb.com">Edisonweb Mobile team</author>
+    <author email="support@edisonweb.com" href="http://www.edisonweb.com">Edisonweb Mobile team</author>
     <content src="index.html" />
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
@@ -169,7 +169,7 @@
     <plugin name="cordova-plugin-statusbar" spec="2.4.3" />
     <plugin name="cordova-plugin-whitelist" spec="1.3.4" />
     <plugin name="cordova-plugin-zip" spec="3.1.0" />
-    <plugin name="cordova-sqlite-storage" spec="3.4.0" />
+    <plugin name="cordova-sqlite-storage" spec="~3.4.0" />
     <plugin name="nl.kingsquare.cordova.background-audio" spec="1.0.1" />
     <plugin name="phonegap-plugin-push" spec="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle-v3">
         <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />

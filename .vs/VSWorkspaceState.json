@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\config",
+    "\\resources",
+    "\\src",
+    "\\src\\directives",
+    "\\src\\lang",
+    "\\src\\providers",
+    "\\src\\theme"
+  ],
+  "SelectedNode": "\\src\\directives\\user-link.ts",
+  "PreviewInSolutionExplorer": false
+}
