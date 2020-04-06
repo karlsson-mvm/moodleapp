@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\resources",
+    "\\resources\\android",
+    "\\resources\\android\\icon"
   ],
+  "SelectedNode": "\\resources\\android\\icon",
   "PreviewInSolutionExplorer": false
 }

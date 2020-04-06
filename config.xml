@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.scuolainrete.narbone" version="3.8.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.scuolainrete.narbone" version="3.8.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>IC Narbone</name>
     <description>IC Narbone official app</description>
     <author email="support@edisonweb.com" href="http://www.edisonweb.com">Edisonweb Mobile team</author>
@@ -21,7 +21,7 @@
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
-    <preference name="AppendUserAgent" value="MoodleMobile" />
+    <preference name="AppendUserAgent" value="ICNarboneMobile" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="android-targetSdkVersion" value="29" />
     <preference name="UIWebViewBounce" value="false" />
@@ -120,10 +120,22 @@
         <icon height="1024" src="resources/ios/icon/icon-1024.png" width="1024" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
         <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-            <string>We need your location so you can attach it as part of your submissions.</string>
+            <string>Potremmo avere bisogno dellatua posizione in modo da allegarla come informazione sulla consegna</string>
         </edit-config>
         <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
-            <string>We need your location so you can attach it as part of your submissions.</string>
+            <string>Potremmo avere bisogno dellatua posizione in modo da allegarla come informazione sulla consegna</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+            <string>E' necessario l'accesso alla fotocamera per caricare foto e video come risorse o a supporto delle attività</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+            <string>E' necessario l'accesso alla libreria per ottenere foto e video come risorse o a supporto delle attività</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
+            <string>E' necessario l'accesso alla libreria per salvare foto e video</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSMicrophoneUsageDescription">
+            <string>E' necessario accedere al microfono per registrare video o audio per la consegne</string>
         </edit-config>
         <icon height="20" src="resources/ios/icon/icon-20.png" width="20" />
         <icon height="40" src="resources/ios/icon/icon-20@2x.png" width="40" />
@@ -174,10 +186,6 @@
     <plugin name="cordova-plugin-zip" spec="3.1.0" />
     <plugin name="cordova-sqlite-storage" spec="3.4.0" />
     <plugin name="nl.kingsquare.cordova.background-audio" spec="1.0.1" />
-    <plugin name="phonegap-plugin-push" spec="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle-v3">
-        <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />
-        <variable name="FCM_VERSION" value="17.5.+" />
-    </plugin>
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application/activity[@android:name='MainActivity']">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true" />
     </edit-config>
@@ -190,6 +198,4 @@
     <config-file parent="FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED" target="*-Info.plist">
         <string>YES</string>
     </config-file>
-    <engine name="android" spec="8.0.0" />
-    <engine name="ios" spec="5.0.1" />
 </widget>
